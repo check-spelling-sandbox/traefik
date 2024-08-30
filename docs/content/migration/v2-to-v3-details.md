@@ -602,7 +602,7 @@ Here are two possible transition strategies:
     using OpenTelemetry (OTel) collectors with appropriate exporters configuration is a viable solution.
     This allows continued compatibility with the existing infrastructure.
 
-Please check the [OpenTelemetry Tracing provider documention](../observability/tracing/opentelemetry.md) for more information.
+Please check the [OpenTelemetry Tracing provider documentation](../observability/tracing/opentelemetry.md) for more information.
 
 #### Internal Resources Observability
 
