@@ -1,0 +1,206 @@
+# See https://github.com/check-spelling/check-spelling/wiki/Configuration-Examples:-patterns
+
+# Automatically suggested patterns
+
+# hit-count: 1876 file-count: 156
+# version suffix <word>v#
+(?:(?<=[A-Z]{2})V|(?<=[a-z]{2}|[A-Z]{2})v)\d+(?:\b|(?=[a-zA-Z_]))
+
+# hit-count: 1691 file-count: 252
+# https/http/file urls
+(?:\b(?:https?|ftp|file)://)[-A-Za-z0-9+&@#/*%?=~_|!:,.;]+[-A-Za-z0-9+&@#/*%=~_|]
+
+# hit-count: 380 file-count: 31
+# hex runs
+\b[0-9a-fA-F]{16,}\b
+
+# hit-count: 144 file-count: 50
+# C network byte conversions
+(?:\d|\bh)to(?!ken)(?=[a-z])|to(?=[adhiklpun]\()
+
+# hit-count: 121 file-count: 51
+# pki (base64)
+LS0tLS1CRUdJT.*
+
+# hit-count: 75 file-count: 31
+# scala imports
+^import (?:[\w.]|\{\w*?(?:,\s*(?:\w*|\*))+\})+
+
+# hit-count: 53 file-count: 47
+# base64 encoded content, possibly wrapped in mime
+(?:^|[\s=;:?])[-a-zA-Z=;:/0-9+]{50,}(?:[\s=;:?]|$)
+
+# hit-count: 51 file-count: 11
+# hex digits including css/html color classes:
+(?:[\\0][xX]|\\u|[uU]\+|#x?|%23)[0-9_a-fA-FgGrR]*?[a-fA-FgGrR]{2,}[0-9_a-fA-FgGrR]*(?:[uUlL]{0,3}|[iu]\d+)\b
+
+# hit-count: 44 file-count: 14
+# IPv6
+\b(?:[0-9a-fA-F]{0,4}:){3,7}[0-9a-fA-F]{0,4}\b
+
+# hit-count: 29 file-count: 8
+# URL escaped characters
+%[0-9A-F][A-F](?=[A-Za-z])
+
+# hit-count: 21 file-count: 1
+# Contributor
+\[[^\]]+\]\(https://github\.com/[^/\s"]+/?\)
+
+# hit-count: 18 file-count: 1
+# css url wrappings
+\burl\([^)]+\)
+
+# hit-count: 15 file-count: 12
+# uuid:
+\b[0-9a-fA-F]{8}-(?:[0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}\b
+
+# hit-count: 11 file-count: 3
+# in check-spelling@v0.0.22+, printf markers aren't automatically consumed
+# printf markers
+(?<!\\)\\[nrt](?=[a-z]{2,})
+
+# hit-count: 9 file-count: 3
+# curl arguments
+\b(?:\\n|)curl(?:\.exe|)(?:\s+-[a-zA-Z]{1,2}\b)*(?:\s+-[a-zA-Z]{3,})(?:\s+-[a-zA-Z]+)*
+
+# hit-count: 7 file-count: 5
+# base64 encoded pkcs
+\bMII[-a-zA-Z=;:/0-9+]+
+
+# hit-count: 7 file-count: 3
+# Non-English
+[a-zA-Z]*[ÀÁÂÃÄÅÆČÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝßàáâãäåæčçèéêëìíîïðñòóôõöøùúûüýÿĀāŁłŃńŅņŒœŚśŠšŜŝŸŽžź][a-zA-Z]{3}[a-zA-ZÀÁÂÃÄÅÆČÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝßàáâãäåæčçèéêëìíîïðñòóôõöøùúûüýÿĀāŁłŃńŅņŒœŚśŠšŜŝŸŽžź]*|[a-zA-Z]{3,}[ÀÁÂÃÄÅÆČÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝßàáâãäåæčçèéêëìíîïðñòóôõöøùúûüýÿĀāŁłŃńŅņŒœŚśŠšŜŝŸŽžź]|[ÀÁÂÃÄÅÆČÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝßàáâãäåæčçèéêëìíîïðñòóôõöøùúûüýÿĀāŁłŃńŅņŒœŚśŠšŜŝŸŽžź][a-zA-Z]{3,}
+
+# hit-count: 6 file-count: 4
+# tar arguments
+\b(?:\\n|)g?tar(?:\.exe|)(?:(?:\s+--[-a-zA-Z]+|\s+-[a-zA-Z]+|\s[ABGJMOPRSUWZacdfh-pr-xz]+\b)(?:=[^ ]*|))+
+
+# hit-count: 5 file-count: 3
+# GitHub actions
+\buses:\s+[-\w.]+/[-\w./]+@[-\w.]+
+
+# hit-count: 4 file-count: 4
+# node packages
+(["'])@[^/'" ]+/[^/'" ]+\g{-1}
+
+# hit-count: 4 file-count: 4
+# bearer auth
+\b[Bb]ear[e][r]:? [-a-zA-Z=;:/0-9+.]+
+
+# hit-count: 3 file-count: 3
+# Go regular expressions
+regexp?\.MustCompile\(`[^`]*`\)
+
+# hit-count: 2 file-count: 1
+# Punycode
+\bxn--[-0-9a-z]+
+
+# hit-count: 1 file-count: 1
+# IServiceProvider / isAThing
+(?:\b|_)(?:(?:ns|)I|isA|Q)(?=(?:[A-Z][a-z]{2,})+(?:[A-Z\d]|\b))
+
+# hit-count: 1 file-count: 1
+# libraries
+\blib(?!eral|erty|rar(?:i(?:an|es)|y))(?=[a-z])
+
+# crypt
+(['"]|)\$(?:2[ayb])\$.{56}\g{-1}
+
+# apache crypt
+\$+(?:apr|)1\$+.{8}\$+.{22}
+
+# sha1 hash
+\{SHA\}[-a-zA-Z=;:/0-9+]{3,}
+
+# github go modules
+"github\.com/.*?"
+
+# authors/credits
+^\*(?: [A-Z](?:\w+|\.)){2,} (?=\[|$)
+
+# base64 test / test2
+dGV.*Q5|aHI5.*AK
+
+# h2c
+h2c
+
+# base64 "TEST"+
+VEVTV\w+
+
+# base64 "this_i"+...
+dGhpc19pc\w+
+
+# base64 "test"+...
+dGVzdD\w+
+
+key\d: .*
+
+password: \w\S{5,}
+
+\bE(F[A-Z]?)?(?=[A-Z][a-z])
+
+(?:Hostname|X-Forwarded-Server): [-\w]+$
+
+# "my" prefix
+\bmy(?!th)(?=\w)
+
+# "response" prefix
+\bresponse(?=[a-z]{2,})
+
+# "tcp" prefix
+tcp(?=[a-z]{2,})
+
+\btest(?![ei])(?=[a-z]{2,})
+
+TLS(?=[a-z])
+
+\budp(?=[a-z])
+
+UDP(?=[A-Z])
+
+virtualIP\("\w+"
+
+ignore_urls=".*"
+
+# Questionably acceptable forms of `in to`
+# Personally, I prefer `log into`, but people object
+# https://www.tprteaching.com/log-into-log-in-to-login/
+\b(?:(?:[Ll]og(?:g(?=[a-z])|)|[Ss]ign)(?:ed|ing)?) in to\b
+
+# to opt in
+\bto opt in\b
+
+# acceptable duplicates
+# ls directory listings
+[-bcdlpsw](?:[-r][-w][-SsTtx]){3}[\.+*]?\s+\d+\s+\S+\s+\S+\s+[.\d]+(?:[KMGT]|)\s+
+# mount
+\bmount\s+-t\s+(\w+)\s+\g{-1}\b
+# C types and repeated CSS values
+\s(auto|buffalo|center|div|inherit|long|LONG|none|normal|solid|sub|thin|transparent|very)(?: \g{-1})+\s
+# C struct
+\bstruct\s+(\w+)\s+\g{-1}\b
+# go templates
+\s(\w+)\s+\g{-1}\s+\`(?:description|graphql|inject|json|yaml):
+# doxygen / javadoc / .net
+(?:[\\@](?:brief|defgroup|groupname|link|t?param|return|retval)|(?:public|private|\[Parameter(?:\(.+\)|)\])(?:\s+(?:static|override|readonly|required|virtual))*)(?:\s+\{\w+\}|)\s+(\w+)\s+\g{-1}\s
+
+# macOS file path
+/MacOS
+
+# Python package registry has incorrect spelling for macOS / Mac OS X
+"Operating System :: MacOS :: MacOS X"
+
+# "company" in Germany
+\bGmbH\b
+
+# IntelliJ
+\bIntelliJ\b
+
+# Commit message -- Signed-off-by and friends
+^\s*(?:(?:Based-on-patch|Co-authored|Helped|Mentored|Reported|Reviewed|Signed-off)-by|Thanks-to): (?:[^<]*<[^>]*>|[^<]*)\s*$
+
+# Autogenerated revert commit message
+^This reverts commit [0-9a-f]{40}\.$
+
+# ignore long runs of a single character:
+\b([A-Za-z])\g{-1}{3,}\b
