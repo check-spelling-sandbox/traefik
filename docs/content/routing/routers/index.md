@@ -1100,7 +1100,7 @@ These matchers do not support non-ASCII characters, use punycode encoded values 
     HostSNI(`example.com`)
     ```
 
-    Match TCP connections openned on any subdomain of `example.com`:
+    Match TCP connections opened on any subdomain of `example.com`:
 
     ```yaml
     HostSNIRegexp(`^.+\.example\.com$`)
