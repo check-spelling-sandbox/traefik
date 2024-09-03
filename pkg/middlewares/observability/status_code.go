@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-// newStatusCodeRecorder returns an initialized statusCodeRecoder.
+// newStatusCodeRecorder returns an initialized statusCodeRecorder.
 func newStatusCodeRecorder(rw http.ResponseWriter, status int) *statusCodeRecorder {
 	return &statusCodeRecorder{rw, status}
 }
