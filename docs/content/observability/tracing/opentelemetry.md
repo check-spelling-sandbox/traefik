@@ -34,7 +34,7 @@ tracing:
 
 !!! info "Propagation"
     
-    Traefik supports the `OTEL_PROPAGATORS` env variable to set up the propragators. The supported propagators are:
+    Traefik supports the `OTEL_PROPAGATORS` env variable to set up the propagators. The supported propagators are:
 
     - tracecontext (default)
     - baggage (default)
