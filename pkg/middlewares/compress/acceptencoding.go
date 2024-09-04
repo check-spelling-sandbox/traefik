@@ -25,7 +25,7 @@ type Encoding struct {
 func getCompressionEncoding(acceptEncoding []string, defaultEncoding string, supportedEncodings []string) string {
 	if defaultEncoding == "" {
 		if slices.Contains(supportedEncodings, brotliName) {
-			// Keeps the pre-existing default inside Traefik if brotli is a supported encoding.
+			// Keeps the preexisting default inside Traefik if brotli is a supported encoding.
 			defaultEncoding = brotliName
 		} else if len(supportedEncodings) > 0 {
 			// Otherwise use the first supported encoding.

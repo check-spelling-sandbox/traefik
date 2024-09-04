@@ -536,7 +536,7 @@ func Test_ExcludedContentTypes(t *testing.T) {
 			expCompression:       true,
 		},
 		{
-			desc:                 "MIME match case insensitive",
+			desc:                 "MIME match case-insensitive",
 			contentType:          "Application/Json",
 			excludedContentTypes: []string{"application/json"},
 			expCompression:       false,
@@ -647,7 +647,7 @@ func Test_IncludedContentTypes(t *testing.T) {
 			expCompression:       false,
 		},
 		{
-			desc:                 "MIME match case insensitive",
+			desc:                 "MIME match case-insensitive",
 			contentType:          "Application/Json",
 			includedContentTypes: []string{"application/json"},
 			expCompression:       true,
@@ -758,7 +758,7 @@ func Test_FlushExcludedContentTypes(t *testing.T) {
 			expCompression:       true,
 		},
 		{
-			desc:                 "MIME match case insensitive",
+			desc:                 "MIME match case-insensitive",
 			contentType:          "Application/Json",
 			excludedContentTypes: []string{"application/json"},
 			expCompression:       false,
@@ -883,7 +883,7 @@ func Test_FlushIncludedContentTypes(t *testing.T) {
 			expCompression:       false,
 		},
 		{
-			desc:                 "MIME match case insensitive",
+			desc:                 "MIME match case-insensitive",
 			contentType:          "Application/Json",
 			includedContentTypes: []string{"application/json"},
 			expCompression:       true,

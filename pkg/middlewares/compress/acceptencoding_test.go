@@ -71,7 +71,7 @@ func Test_getCompressionEncoding(t *testing.T) {
 			expected:       notAcceptable,
 		},
 		{
-			desc:           "non-zero is higher than 0",
+			desc:           "non-zero is greater than 0",
 			acceptEncoding: []string{"gzip, *;q=0"},
 			expected:       gzipName,
 		},

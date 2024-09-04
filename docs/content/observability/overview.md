@@ -37,6 +37,6 @@ Read the [Metrics documentation](./metrics/overview.md) to learn how to configur
 
 The Traefik tracing system allows developers to gain deep visibility into the flow of requests through their infrastructure.
 
-Traefik provides tracing information in the OpenTelemery format.
+Traefik provides tracing information in the OpenTelemetry format.
 
 Read the [Tracing documentation](./tracing/overview.md) to learn how to configure it.

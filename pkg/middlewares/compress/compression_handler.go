@@ -39,7 +39,7 @@ type Config struct {
 	MiddlewareName string
 }
 
-// CompressionHandler handles Brolti and Zstd compression.
+// CompressionHandler handles Brotli and Zstd compression.
 type CompressionHandler struct {
 	cfg                  Config
 	excludedContentTypes []parsedContentType
