@@ -581,7 +581,7 @@ func (p *Provider) watchConnectTLS(ctx context.Context) error {
 	}
 }
 
-// includesHealthStatus returns true if the status passed in exists in the configured StrictChecks configuration. Statuses are case insensitive.
+// includesHealthStatus returns true if the status passed in exists in the configured StrictChecks configuration. Statuses are case-insensitive.
 func (p *Provider) includesHealthStatus(status string) bool {
 	for _, s := range p.StrictChecks {
 		// If the "any" status is included, assume all health checks are included
