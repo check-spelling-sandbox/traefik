@@ -331,7 +331,7 @@ func TestHostRegexpMatcher(t *testing.T) {
 			},
 		},
 		{
-			desc: "valid HostRegexp matcher with case sensitive regexp",
+			desc: "valid HostRegexp matcher with case-sensitive regexp",
 			rule: "HostRegexp(`^[A-Z]+\\.com$`)",
 			expected: map[string]int{
 				"https://example.com":      http.StatusNotFound,
